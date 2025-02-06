@@ -4,9 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/src/output.css">
+    <link rel="stylesheet" href="output.css">
 </head>
 <body>
-  <h1 class="underline bg-red-600 text-red-500">Hey Seema</h1>  
+  <main class="w-full">
+   <header class="bg-slate-800  h-16 w-full p-2 md:h-24 lg:h-24 lg:w-98.5 xl:w-100 2xl:w-full  2xl:h-20 3xl:w-full 3xl:h-28">
+    <h1 class="text-white italic tracking-wide text-shadow-glow  text-center font-bold text-2xl mt-2 md:text-4xl md:mt-4 lg:mt-1 xl:text-5xl 2xl:text-4xl">Weather Dashboard</h1>
+   </header>
+  <div class="lg:w-98.5  lg:flex xl:w-100 2xl:max-w-max 3xl:w-full "> 
+
+    <section class=" p-2 h-64  md:flex lg:block  lg:h-97 lg:w-98.5 xl:w-97    2xl:w-84.5  4xl:min-w-max  ">
+
+    <article class=" w-82 h-36 md:h-60 lg:h-48  xl:w-97 xl:h-56 ">
+      <label for="search" class="text-lg text-shadow-lg font-bold mt-4 ml-4 block md:text-3xl mb-2 xl:text-4xl text-center 2xl:text-2xl 2xl:text-left 4xl:text-4xl 4xl:text-center">Enter City Name</label> <br>
+      <input type="text" id="search" placeholder="eg:Karnataka,Mumbai" class=" border border-gray-600 p-2 ml-4 -mt-5 w-80 md:m-2 md:h-11 lg:ml-4 lg:-mt-2 lg:p-3 xl:w-96 xl:p-4 xl:ml-32 xl:text-2xl 2xl:text-xs 2xl:h-7 2xl:ml-2 4xl:ml-40"> <br>
+      <button class="border text-shadow-lg border-black bg-slate-800 w-80 mt-4 p-1 ml-4 text-white rounded-sm hover:bg-white hover:border-gray-800 hover:border-2 hover:shadow-inner hover:shadow-cyan-950 hover:text-gray-950 hover:font-bold md:mt-8  md:h-11 lg:mt-3 lg:p-3 lg:text-xl xl:w-96 xl:mt-6 xl:ml-32 2xl:ml-2 2xl:text-sm 2xl:h-12 4xl:ml-40" >Search</button>
+    </article>
+    
+    <article class="flex items-center my-4  mt-1 xl:mt-5 2xl:-mt-5">
+      <hr class="flex-grow border-gray-500">
+      <span class="mx-2 text-gray-500 md:text-2xl xl:text-3xl 2xl:text-sm">or</span>
+      <hr class="flex-grow border-gray-500 ">
+    </article>
+
+    <article class=" -mt-2 p-2 w-82  xl:w-97 xl:h-24">
+      <button class="border text-shadow-lg  bg-gray-600 w-80  p-1 ml-4 text-white rounded-sm shadow-md hover:bg-white hover:text-gray-950 hover:font-bold hover:border-2  0 hover:border-gray-900   hover:shadow-inner hover:shadow-cyan-950 md:mt-20 md:w-72 md:p-2 md:text-2xl lg:mt-0 lg:p-1 lg:text-xl xl:w-96 xl:p-3 xl:ml-32 xl:mt-3 2xl:text-sm 2xl:m-2 4xl:ml-40">Use Current Location</button>
+    </article>
+    
+     </section>
+   
+    <section class="p-2 lg:w-99 xl:w-100 2xl:w-97.6  3xl:w-99  ">
+
+      <article class="bg-slate-700 animate-pulse h-40 w-80 mt-4 ml-4 rounded-md hover:animate-bounceOnce  md:w-97 md:h-72 lg:m-20 xl:w-97 xl:h-96 xl:ml-14 2xl:w-97 2xl:h-72 2xl:ml-44 2xl:mt-3 3xl:w-97.5 3xl:h-97 3xl:mt-16 3xl:ml-40  "></article>
+      <h2 class="text-lg text-shadow-lg font-bold mt-4 ml-4 md:text-4xl lg:m-5 xl:text-5xl 2xl:text-2xl 2xl:-mt-8">5 Day Forecast</h2>
+      <article class="flex flex-wrap  hover:animate-bounceOnce 3xl:max-w-max">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div> 
+      </article>
+     </section>
+  </div>
+  
+ 
+  </main>
 </body>
 </html>

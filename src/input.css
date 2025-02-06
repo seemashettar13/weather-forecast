@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+
+.box{
+    @apply bg-slate-500 m-2 h-48 w-40 rounded-lg hover:animate-bounce md:w-60 md:h-80 md:m-3 lg:m-3 lg:w-64 xl:w-64 xl:m-4  xl:h-96 xl:rounded-xl 2xl:w-48 2xl:h-60 2xl:m-3 3xl:m-3 4xl:w-64 4xl:h-80
+}
+.text-shadow-sm {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 1);
+  }
+  
+  .text-shadow-glow {
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+  }
+  
+}
