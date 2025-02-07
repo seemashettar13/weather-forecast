@@ -17,8 +17,8 @@
 
     <article class=" w-82 h-36 md:h-60 lg:h-48  xl:w-97 xl:h-56 ">
       <label for="search" class="text-lg text-shadow-lg font-bold mt-4 ml-4 block md:text-3xl mb-2 xl:text-4xl text-center 2xl:text-2xl 2xl:text-left 4xl:text-4xl 4xl:text-center">Enter City Name</label> <br>
-      <input type="text" id="search" placeholder="eg:Karnataka,Mumbai" class=" border border-gray-600 p-2 ml-4 -mt-5 w-80 md:m-2 md:h-11 lg:ml-4 lg:-mt-2 lg:p-3 xl:w-96 xl:p-4 xl:ml-32 xl:text-2xl 2xl:text-xs 2xl:h-7 2xl:ml-2 4xl:ml-40"> <br>
-      <button class="border text-shadow-lg border-black bg-slate-800 w-80 mt-4 p-1 ml-4 text-white rounded-sm hover:bg-white hover:border-gray-800 hover:border-2 hover:shadow-inner hover:shadow-cyan-950 hover:text-gray-950 hover:font-bold md:mt-8  md:h-11 lg:mt-3 lg:p-3 lg:text-xl xl:w-96 xl:mt-6 xl:ml-32 2xl:ml-2 2xl:text-sm 2xl:h-12 4xl:ml-40" >Search</button>
+      <input type="text" id="inputBar" placeholder="eg:Karnataka,Mumbai" class=" border border-gray-600 p-2 ml-4 -mt-5 w-80 md:m-2 md:h-11 lg:ml-4 lg:-mt-2 lg:p-3 xl:w-96 xl:p-4 xl:ml-32 xl:text-2xl 2xl:text-xs 2xl:h-7 2xl:ml-2 4xl:ml-40"> <br>
+      <button id="searchButton" class="border text-shadow-lg border-black bg-slate-800 w-80 mt-4 p-1 ml-4 text-white rounded-sm hover:bg-white hover:border-gray-800 hover:border-2 hover:shadow-inner hover:shadow-cyan-950 hover:text-gray-950 hover:font-bold md:mt-8  md:h-11 lg:mt-3 lg:p-3 lg:text-xl xl:w-96 xl:mt-6 xl:ml-32 2xl:ml-2 2xl:text-sm 2xl:h-12 4xl:ml-40" >Search</button>
     </article>
     
     <article class="flex items-center my-4  mt-1 xl:mt-5 2xl:-mt-5">
@@ -35,19 +35,49 @@
    
     <section class="p-2 lg:w-99 xl:w-100 2xl:w-97.6  3xl:w-99  ">
 
-      <article class="bg-slate-700 animate-pulse h-40 w-80 mt-4 ml-4 rounded-md hover:animate-bounceOnce  md:w-97 md:h-72 lg:m-20 xl:w-97 xl:h-96 xl:ml-14 2xl:w-97 2xl:h-72 2xl:ml-44 2xl:mt-3 3xl:w-97.5 3xl:h-97 3xl:mt-16 3xl:ml-40  "></article>
+      <article class="bg-slate-700 flex justify-center items-center h-40 w-80 mt-4 ml-4 rounded-md hover:animate-bounceOnce  md:w-97 md:h-72 lg:m-20 xl:w-97 xl:h-96 xl:ml-14 2xl:w-97 2xl:h-72 2xl:ml-44 2xl:mt-3 3xl:w-97.5 3xl:h-97 3xl:mt-16 3xl:ml-40 ">
+        <div id="weather-display"  class=" h-32 w-52 md:h-52 md:w-96">
+       
+        </div>
+      <div id="weather-image-container" class=" h-32 w-32 md:h-52 md:w-36">
+        <div class="weather-icon"></div>
+       
+      </div>
+
+      </article>
       <h2 class="text-lg text-shadow-lg font-bold mt-4 ml-4 md:text-4xl lg:m-5 xl:text-5xl 2xl:text-2xl 2xl:-mt-8">5 Day Forecast</h2>
       <article class="flex flex-wrap  hover:animate-bounceOnce 3xl:max-w-max">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div> 
+        <div class="box">
+         <div class="weather-icon-box">
+
+         </div>
+        </div>
+        <div class="box">
+ <div class="weather-icon-box">
+          
+         </div>
+        </div>
+        <div class="box">
+          <div class="weather-icon-box">
+          
+          </div>
+        </div>
+        <div class="box">
+          <div class="weather-icon-box">
+          
+          </div>
+        </div>
+        <div class="box">
+          <div class="weather-icon-box">
+          
+          </div>
+        </div> 
       </article>
      </section>
   </div>
   
  
   </main>
+  <script src="script.js"></script>
 </body>
 </html>

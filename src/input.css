@@ -6,12 +6,23 @@
 @layer components {
 
 .box{
-    @apply bg-slate-500 m-2 h-48 w-40 rounded-lg hover:animate-bounce md:w-60 md:h-80 md:m-3 lg:m-3 lg:w-64 xl:w-64 xl:m-4  xl:h-96 xl:rounded-xl 2xl:w-48 2xl:h-60 2xl:m-3 3xl:m-3 4xl:w-64 4xl:h-80
+    @apply bg-slate-500  text-white text-center space-y-1 m-2 font-semibold  h-48 w-40 rounded-lg hover:animate-bounce  md:w-60 md:h-80 md:m-3 lg:m-3 lg:w-64 xl:w-64 xl:m-4  xl:h-96 xl:rounded-xl 2xl:w-52 2xl:h-80 2xl:m-1 3xl:m-3 4xl:w-64 4xl:h-80 
+}
+.text{
+    @apply text-white  mt-2 ml-5 font-semibold
+}
+.heading{
+@apply font-bold  text-xl text-shadow-sm mt-3 md:text-2xl xl:text-2xl xl:text-left 
+}
+.heading4{
+  @apply  text-sm text-left mt-1 md:text-lg md:mt-3  font-semibold xl:text-lg
 }
 .text-shadow-sm {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   }
-  
+  .weather-icon-box{
+    @apply w-12 h-12 md:w-28 md:h-28  ml-10 md:ml-12  xl:w-32 xl:h-32
+  }
   .text-shadow-lg {
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 1);
   }
