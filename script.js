@@ -10,7 +10,7 @@ const API_Key = `97a1ae312bdb00e3ee46f4d299e2875e`;
 
 const getDetails = async (cityValue, lat, lon) => {
   try {
-    const weatherAPI = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_Key}`;
+    const weatherAPI = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_Key}`;
     const response = await fetch(weatherAPI);
     const result = await response.json();
     console.log(result);
@@ -114,7 +114,7 @@ const cityName = async () => {
   const cityValue = inputBar.value.trim();
   if (!cityValue) return alert("Please enter a city name!");
   try {
-    const firstAPI = `http://api.openweathermap.org/geo/1.0/direct?q=${cityValue}&limit=5&appid=${API_Key}`;
+    const firstAPI = `https://api.openweathermap.org/geo/1.0/direct?q=${cityValue}&limit=5&appid=${API_Key}`;
     const response = await fetch(firstAPI);
     const result = await response.json();
 
