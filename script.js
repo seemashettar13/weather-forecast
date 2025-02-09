@@ -7,6 +7,21 @@ const locationBtn = document.querySelector("#locatiinBtn"); // Fetch weather bas
 
 const API_Key = `97a1ae312bdb00e3ee46f4d299e2875e`;
 
+// Function to get weather icon path based on weather description
+
+const getWeatherIconPath = (weatherDescription) => {
+
+
+  let imagePath = "assets/default.png"; // Fallback image
+  if (weatherDescription.includes("clear")) imagePath = "assets/clear.png";
+  else if (weatherDescription.includes("rain")) imagePath = "assets/rain.png";
+  else if (weatherDescription.includes("cloud")) imagePath = "assets/clouds.png";
+  else if (weatherDescription.includes("snow")) imagePath = "assets/snow.png";
+  return imagePath;
+
+ 
+};
+
 const getDetails = async (cityValue, lat, lon) => {
   try {
     const weatherAPI = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_Key}`;
@@ -14,6 +29,7 @@ const getDetails = async (cityValue, lat, lon) => {
     const result = await response.json();
 
     // Display current weather
+    const currentWeather = result.list[0].weather[0].main.toLowerCase();
     weatherDisplay.classList.add("text");
     weatherDisplay.innerHTML = `
       <h2 class="heading">${cityValue}</h2>
@@ -22,14 +38,8 @@ const getDetails = async (cityValue, lat, lon) => {
       <h4 class="heading4">Humidity: ${result.list[0].main.humidity}%</h4>
     `;
 
-    const currentWeather = result.list[0].weather[0].main.toLowerCase();
-    let imagePath = "assets/default.png"; // Fallback image
-    if (currentWeather.includes("clear")) imagePath = "assets/clear.png";
-    else if (currentWeather.includes("rain")) imagePath = "assets/rain.png";
-    else if (currentWeather.includes("cloud")) imagePath = "assets/clouds.png";
-    else if (currentWeather.includes("snow")) imagePath = "assets/snow.png";
-
-    weatherImageContainer.innerHTML = `<img src="${imagePath}" alt="${currentWeather}" class="weather-icon" />`;
+    const currentImagePath = getWeatherIconPath(currentWeather);
+    weatherImageContainer.innerHTML = `<img src="${currentImagePath}" alt="${currentWeather}" class="weather-icon" />`;
 
     // Filter data for one forecast per day (e.g., at 12:00 PM)
     const dailyForecasts = result.list.filter(item => item.dt_txt.includes("12:00:00"));
@@ -42,9 +52,13 @@ const getDetails = async (cityValue, lat, lon) => {
         const temp = (forecast.main.temp - 273.15).toFixed(2);
         const wind = forecast.wind.speed;
         const humidity = forecast.main.humidity;
+        const forecastWeather = forecast.weather[0].main.toLowerCase();
+        const forecastImagePath = getWeatherIconPath(forecastWeather);
 
+        // box.imgBox.classList.add("weather-icon-box")
         box.innerHTML = `
           <h2 class="heading">(${date})</h2>
+          <img src="${forecastImagePath}" id="imgBox" alt="${forecastWeather}" class="weather-icon-box" />
           <h4 class="heading4">Temperature: ${temp}°C</h4>
           <h4 class="heading4">Wind Speed: ${wind} m/s</h4>
           <h4 class="heading4">Humidity: ${humidity}%</h4>
@@ -91,3 +105,36 @@ locationBtn.addEventListener("click", () => {
     alert("Geolocation is not supported by your browser.");
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
